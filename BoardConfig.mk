@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PATH := device/nokia/DRG_sprout
+DEVICE_PATH := device/nokia/DDV_sprout
 
 # Architecture
 TARGET_ARCH := arm64
@@ -64,7 +64,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := DRG_sprout
+TARGET_OTA_ASSERT_DEVICE := DDV_sprout
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm660
