@@ -2,7 +2,7 @@
     Input:
         manifest.xml
 -->
-<manifest version="1.0" type="device" target-level="2">
+<manifest version="1.0" type="device" target-level="3">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -166,12 +166,12 @@
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
-        <version>3.0</version>
+        <version>4.0</version>
         <interface>
             <name>IKeymasterDevice</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::IKeymasterDevice/default</fqname>
+        <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.light</name>
@@ -207,16 +207,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IMemtrack/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.2::INfc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.power</name>
@@ -255,18 +245,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IDevice/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISecureElement</name>
-            <instance>SIM1</instance>
-            <instance>SIM2</instance>
-        </interface>
-        <fqname>@1.0::ISecureElement/SIM1</fqname>
-        <fqname>@1.0::ISecureElement/SIM2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
@@ -454,76 +432,6 @@
         <fqname>@1.0::IDisplayPostproc/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.fih.hardware.box</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBox</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBox/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.fih.hardware.ifaa</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IIfaa</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IIfaa/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.fih.hardware.iface</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IIface</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IIface/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.fih.hardware.stabilityDebugCtl</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IstabilityDebugCtl</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IstabilityDebugCtl/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.focaltech.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFocalFingerprintService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFocalFingerprintService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.goodix.hardware.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IGoodixBiometricsFingerprint</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IGoodixBiometricsFingerprint/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>INqNfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::INqNfc/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.pixelworks.hardware.display</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -574,6 +482,16 @@
         <fqname>@2.0::ILocHidlGnss/gnss_vendor</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.acc_calibrate</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAcc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IAcc/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.alarm</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -612,16 +530,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IBTConfigStore/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.cacert</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IService/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.cryptfshw</name>
@@ -674,16 +582,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IFmHci/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.improvetouch.touchcompanion</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITouchCompanion</name>
-            <instance>TouchCompanionService</instance>
-        </interface>
-        <fqname>@1.0::ITouchCompanion/TouchCompanionService</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
@@ -859,16 +757,6 @@
         <fqname>@1.1::IHostapdVendor/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.wifi.keystore</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IKeystoreExt</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IKeystoreExt/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.wifi.supplicant</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -877,16 +765,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::ISupplicantVendor/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.wifi.wifilearner</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IWifiStats</name>
-            <instance>wifiStats</instance>
-        </interface>
-        <fqname>@1.0::IWifiStats/wifiStats</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.ims.callinfo</name>
@@ -907,6 +785,46 @@
             <instance>imsrtpservice</instance>
         </interface>
         <fqname>@2.1::IRTPService/imsrtpservice</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.sw.swfingerprint</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISwfingerprint</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISwfingerprint/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.trustonic.tee</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITee</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ITee/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.trustonic.tee.tui</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITui</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ITui/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.trustonic.teeregistry</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITeeRegistry</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ITeeRegistry/default</fqname>
     </hal>
     <sepolicy>
         <version>29.0</version>
