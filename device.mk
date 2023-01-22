@@ -4,7 +4,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 LOCAL_PATH := device/nokia/DDV_sprout
 
 # Shipping level
-PRODUCT_SHIPPING_API_LEVEL := 27
+PRODUCT_SHIPPING_API_LEVEL := 28
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
