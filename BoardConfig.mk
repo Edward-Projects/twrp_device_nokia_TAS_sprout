@@ -167,3 +167,18 @@ BOARD_PROVIDES_GPTUTILS := true
 # Dimensions
 TW_Y_OFFSET := 89
 TW_H_OFFSET := -89
+
+# Custom TWRP Versioning
+ifneq ($(wildcard device/common/version-info/.),)
+    # device version is optional - the default value is "0" if nothing is set in device tree
+    CUSTOM_TWRP_DEVICE_VERSION := 0
+    # version prefix is optional - the default value is "LOCAL" if nothing is set in device tree
+    CUSTOM_TWRP_VERSION_PREFIX := EdwardWu
+
+    include device/common/version-info/custom_twrp_version.mk
+
+    ifeq ($(CUSTOM_TWRP_VERSION),)
+        CUSTOM_TWRP_VERSION := $(shell date +%Y%m%d)-01
+    endif
+
+endif
