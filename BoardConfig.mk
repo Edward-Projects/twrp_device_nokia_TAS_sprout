@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PATH := device/nokia/DDV_sprout
+DEVICE_PATH := device/nokia/TAS_sprout
 
 # Architecture
 TARGET_ARCH := arm64
@@ -66,11 +66,11 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := DDV_sprout
+TARGET_OTA_ASSERT_DEVICE := TAS_sprout
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm660
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno509
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno512
 TARGET_USES_HARDWARE_QCOM_BOOTCTRL := true
 QCOM_BOARD_PLATFORMS += sdm660
 
